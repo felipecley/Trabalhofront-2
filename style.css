@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #5f5fe3, #035066);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    text-align: center; /* Centraliza o texto */
+}
+
+.titulo, h2 {
+    border: 2px solid black; /* Adiciona borda preta */
+    padding: 10px; /* Adiciona espaçamento interno */
+    color: white;
+    background-color: black;
+}
+
+.sobre-mim {
+    margin: 20px; /* Adiciona espaço ao redor do parágrafo */
+    padding: 20px;
+    margin-top: 0px;
+}
+
+h2 {
+    margin-top: 10px; /* Empurra o h2 para o final da página */
+    
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    transition: 0.03s;
+
+}
+
+a:hover{
+    color: white;
+}
+
+.imagem {
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    
+    
+}
+
+.imagem img {
+    max-width: 150px; /* Define um tamanho máximo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 30px; /* Faz a imagem ter bordas arredondadas */
+}
+
+.formulario a.botao {
+    display: inline-block; /* Permite que o link tenha largura e altura */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #060606; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.formulario a.botao:hover {
+    background-color: #4a4ab3; /* Muda a cor de fundo ao passar o mouse */
+}
