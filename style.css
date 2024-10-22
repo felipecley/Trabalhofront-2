@@ -69,3 +69,64 @@ a:hover{
 .formulario a.botao:hover {
     background-color: #4a4ab3; /* Muda a cor de fundo ao passar o mouse */
 }
+
+
+/* estilos para o formulário */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* altura do container */
+}
+
+.form{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.campo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff; /* Cor azul ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.btn {
+    background-color: #060606; /* Cor azul */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a4ab3; /* Cor azul mais escura ao passar o mouse */
+}
