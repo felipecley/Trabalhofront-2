@@ -11,20 +11,48 @@
 <body>
     <h1 class="titulo">Bem vindo ao meu site</h1> 
 
-    <div class="imagem">
-        <img src="Imagemwhats.jpg" title="foto perfil" alt="imagem">
-    </div>
     
-    <p class="sobre-mim">Estudante de Análise e Desenvolvimento de Sistemas, dedicado a aprimorar minhas habilidades em HTML, CSS, Python e JavaScript.</p>
+        <div class="imagem">
+            <img src="Imagemwhats.jpg" title="foto perfil" alt="imagem">
+        </div>
+    
+        <!--Botao para abrir card-->
+        <button onclick="toggleCard()" class="btn-2">Ver informações Profissionais</button>
+
+        <!--Card oculto com informações-->
+        <div id="infoCard" class="card-2">
+            <p class="description">Iniciei minha carreira na área de elevadores, começando na montagem e depois migrando para a parte elétrica.<br>
+                 Em seguida, atuei no setor de subestações, assumindo também a parte elétrica. Hoje, foco nos estudos de Análise e Desenvolvimento de Sistemas, aprimorando habilidades em HTML, CSS, JavaScript e Python para atuar na área de TI.</p>
+        </div>
+
+        <section class="informacoes">
+            <div class="card">
+                <p class="sobre-mim">Estudante de Análise e Desenvolvimento de Sistemas, dedicado a aprimorar minhas habilidades em HTML, CSS, Python e JavaScript.</p>
+            </div>    
+        </section>
+    
+    <div class="imagem-logo">
+        <img src="htmlimagem.png" title="html">
+        <img src="cssimagem.png" title="css">
+        <img src="javascriptimagem.png" title="javascript">
+        <img src="pythonimagem.png" title="python">
+    </div>
+
 
     <div class="formulario">
         <a href="form.html" class="botao">Ir para formulário</a>
     </div>
 
-    <h2>Desenvolvido por Felipe Cley</h2>
+    <div class="rede-social">
+        <a href="https://www.linkedin.com/in/felipe-cley-b50390251/" target="_blank">
+            <img src="imagemlinkedin.png" title="LinkedIn" class="logo">
+        </a>
+        <a href="https://www.instagram.com/w_cley/" target="_blank">
+            <img src="instaimagem.png" title="Instagram" class="logo">
+        </a>
+    </div>
 
-    
-    
+    <h2>Desenvolvido por Felipe Cley</h2>
 
 </body>
 </html>

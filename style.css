@@ -22,13 +22,13 @@ body {
 }
 
 .sobre-mim {
-    margin: 20px; /* Adiciona espaço ao redor do parágrafo */
+    margin: 20px; 
     padding: 20px;
     margin-top: 0px;
 }
 
 h2 {
-    margin-top: 10px; /* Empurra o h2 para o final da página */
+    margin-top: 10px; 
     
 }
 
@@ -44,10 +44,9 @@ a:hover{
 }
 
 .imagem {
-    display: flex; /* Usar flexbox para centralizar */
-    justify-content: center; /* Centraliza horizontalmente */
-    
-    
+    display: flex; 
+    justify-content: flex-start; 
+    margin: 20px;
 }
 
 .imagem img {
@@ -55,6 +54,12 @@ a:hover{
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 30px; /* Faz a imagem ter bordas arredondadas */
 }
+
+.imagem:hover{
+    transform: translateY(-10px);
+}
+
+
 
 .formulario a.botao {
     display: inline-block; /* Permite que o link tenha largura e altura */
@@ -116,7 +121,7 @@ input[type="email"]:focus {
 }
 
 .btn {
-    background-color: #060606; /* Cor azul */
+    background-color: #060606; 
     color: #fff;
     padding: 10px;
     border: none;
@@ -129,4 +134,184 @@ input[type="email"]:focus {
 
 .btn:hover {
     background-color: #4a4ab3; /* Cor azul mais escura ao passar o mouse */
+}
+
+h1{
+    border: 2px solid black;
+    color: white;
+    padding: 10px;
+    background-color: black;
+}
+
+
+/*ESTILOS PARA CAMPOS COM ERROS*/
+input[type="text"].erro,
+input[type="number"].erro,
+input[type="email"].erro {
+    border-color: red; /* Cor vermelha se o campo estiver incorreto */
+}
+/*ESTILOS PARA CAMPOS VÁLIDOS*/
+input[type="text"].valido,
+input[type="number"].valido,
+input[type="email"].valido {
+    border-color: rgb(15, 213, 25); /* Cor verde se o campo estiver correto */
+}
+
+.small {
+    color: red;
+    font-size: 0.8em;
+}
+
+
+.container-informacao{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-informacao p {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+
+.botao-confirmation button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 360px;
+}
+
+button:hover{
+    background-color: #4a4ab3; 
+}
+ 
+.container-informacao strong{
+    margin-right: 8px;
+}
+
+.imagem-logo{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagem-logo img{
+    width: 50px;
+    transition: 0.3s ease;
+}
+
+.imagem-logo:hover{
+    transform: translateY(-10px);
+}
+
+.card{
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: left;
+    max-width: 450px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    background-color: #4a4ab3;
+    transform: translateY(-10px);
+}
+
+.sobre-mim {
+    color: white;
+}
+
+.rede-social{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    gap: 15px;
+    margin-top: 516px;
+    transition: 0.3s ease;
+}
+
+.rede-social:hover{
+    transform: translateY(-10px);
+}
+
+/*ESTILIZAÇÃO PARA O CARD CRIADO COM INFORMAÇÕES PROFISSIONAIS*/
+.btn-2 {
+    background-color: #060606; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 250px;
+    transition: background-color 0.3s;
+    position: fixed;
+    right: 20px; 
+    top: 100px;
+
+}
+.btn-2:hover {
+    background-color: #4a4ab3;
+}
+
+/* Estilo do Card */
+.card-2 {
+    display: none; 
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(59, 59, 59, 0.2);
+    text-align: center;
+    width: 300px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    right: 20px;
+    top: 150px;
+}
+.card-2:hover{
+    background-color: #4a4ab3;
+    transform: translateY(-10px);
+}
+
+/* Estilo quando o card está visível */
+.card-2.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

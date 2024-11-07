@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Confirmação</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <h1>Confirmação de Dados</h1>
+    <div class="container-informacao">
+        <p><strong>Nome:</strong> <span id="confirmNome"></span></p>
+        <p><strong>Sobrenome:</strong> <span id="confirmSobrenome"></span></p>
+        <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+        <p><strong>Idade:</strong> <span id="confirmIdade"></span></p>
+
+    <div class="botao-confirmation">    
+        <button id="confirmar">Confirmar e Enviar</button>
+    </div>
+    </div>
+
+    <script>
+        // Exibir os dados armazenados no localStorage
+        document.getElementById('confirmNome').textContent = localStorage.getItem('nome');
+        document.getElementById('confirmSobrenome').textContent = localStorage.getItem('sobrenome');
+        document.getElementById('confirmEmail').textContent = localStorage.getItem('email');
+        document.getElementById('confirmIdade').textContent = localStorage.getItem('idade');
+
+        //Função para salvar os dados em data.json e redirecionar para página inicial
+        document.getElementById('confirmar').addEventListener('click', function() {
+            const data = {
+                nome: localStorage.getItem('nome'),
+                sobrenome: localStorage.getItem('sobrenome'),
+                email: localStorage.getItem('email'),
+                idade: localStorage.getItem('idade')
+            
+        };
+
+        //Cria um arquivo JSON
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: "aplication/json"});
+        const url = URL.createObjectURL(blob);
+
+        //Criar um link para download
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "data.json";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        //Redireciona para página inicial
+        window.location.href = 'index.html';
+
+    });     
+
+        // Confirmar e redirecionar para a página inicial
+       // document.getElementById('confirmar').addEventListener('click', function() {
+            // Aqui você pode incluir a lógica para salvar os dados no arquivo 'data.json'
+         //   window.location.href = 'index.html'; // Redirecionar para a página inicial
+     //   });
+    </script>
+</body>
+</html>
